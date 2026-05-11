@@ -1,0 +1,359 @@
+/*  NAVIGATION MENU */ 
+header { 
+    position: fixed; 
+    width: 100%; 
+    top: 0px; 
+    height: 60px; /* H1 - all height with this sign must be same */
+    background-color: #373842; /* header color - 02 - #373842  */
+    text-align: center; 
+    z-index: 9001; 
+    box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.9);
+  }  
+.undercover { 
+    position: static; 
+    height: 60px; /* H1 */
+    font-size: 16px; 
+    visibility: visible; 
+}
+.logotype a { 
+    display: inline-block; 
+    text-decoration: none; 
+    line-height: 34px; 
+} 
+.logotype img { 
+    display: block;  /*  because of -webkit-tap-highlight-color  */ 
+    height: 50px; /* combine with margin-top and margin-bottom to get H1 */
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    line-height: 50px; /* vertically centers broken image icon and alt text in some browsers */
+    margin-left: 8px; 
+    width:auto; 
+    font-size: 22px;   /* ALT */
+    font-family: "SlovaC", Tahoma, sans-serif; 
+    color: #e2d3ff; /* img alt text color */
+} 
+.toplink a {
+    height: 60px; /* H1 */
+    line-height: 60px; /* H1 */
+    font-size: 22px;   /*  ¤T */
+    font-family: "SlovaC", Tahoma, sans-serif; 
+    color: #ffffff; 
+    text-decoration: none; 
+}
+.toplink a:focus, .sublinks a:focus, .tab-key a:focus { /* keyboard accessibility */
+    outline: 0; 
+    box-shadow: -1px 1px #ffcd8c inset, 1px -1px #ffcd8c inset ; /* S1 boja za TAB i hover  */ 
+}
+.toplink img, .sublinks img { 
+    height: 30px; /* combine with margin-top and margin-bottom to get H1 */
+    line-height: 22px; 
+    width: auto;
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    font-size: 22px;   /* ALT */
+    font-family: "SlovaC", Tahoma, sans-serif; 
+    color: #ffffff; /* img alt text color */
+}
+.user-select-none { user-select: none; }
+
+/* --------------------------------------------------- SMALL VIEWPORT / hamburger meni */ 
+#wrapper { /* logo & navigation wrapper */
+    z-index: 9009; 
+    position: fixed; 
+    display: block; 
+    max-width: unset; 
+    width: 100%; 
+    margin: 0; 
+    height: 1px; 
+    text-align: center; 
+    top: 60px; /* H1 submenu under header */
+}
+.logotype {
+    z-index: 9008; 
+    position: fixed;
+    float: unset; 
+    height: 60px; /* H1 */ 
+    width: auto; 
+    text-align: center; 
+    top: 0;
+    left: 0;
+    display: unset; 
+ }
+.nav-class { /* vertikalna navigacija */ 
+    z-index: 9006; 
+    display: none; 
+    position: relative;
+    min-width: unset;
+    width: 100%; 
+    height: calc(100vh - 60px);  /* 100vh - H1 */ 
+    text-align: center; /* horizontal position of topmenu links */ 
+    overflow-y: auto; 
+    outline: 0; 
+    background-color: #352c44; /* color 03 - toplink color */ 
+    justify-content: unset;
+    float: unset; 
+}
+.nav-toggle { /* just for hamburger */
+    display: block; 
+}
+.nav-close { /* just for hamburger */
+    display: none; 
+}
+.toplink {
+    z-index: 9005; 
+    display: block;
+    position: relative;
+    background-color: unset;       
+    box-shadow: inset 0 1px #3e3c4b; /* color 10 - top border color */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Safari */
+    -webkit-tap-highlight-color: transparent; /* for some Androids */
+}
+.top-toggle { 
+    background-color: #423757;  /* color 20 - change toplink color when tapped/clicked  */
+}
+.toplink a {
+    display: block; 
+    position: relative;
+    padding: 0 5% 0 5%;
+} 
+.topsub a { 
+    cursor: pointer; 
+    pointer-events: unset; 
+} 
+.sublinks {
+    z-index: 9005; 
+    top: unset; 
+    display: none; 
+    position: relative; 
+    width: 100%; 
+}
+.sublinks a {
+    display: inherit; 
+    height: 60px; /* H1 */
+    line-height: 60px; /* H1 */
+    cursor: pointer;
+    font-size: 22px;   /*  ¤T */
+    font-family: "SlovaC", Tahoma, sans-serif; 
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 0 10% 0 10%; 
+    background-color: #483b5e;  /* color 04 - sublinks color */
+    box-shadow: inset 0 1px #5e4e77;  /* color 30 - top border color */
+}
+#hamburger-div { /* Hamburger icon */
+    z-index: 9007; 
+    background-color: #373842; /* color 02 */
+    width: auto;
+    height: 60px;
+    padding: 0;
+    display: block; 
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+#hamburger-div a { 
+    display: inline-block; 
+    text-decoration: none;
+    height: 60px; 
+    line-height: 60px; 
+}
+#hamburger-div img { 
+    display: block;   /* because of -webkit-tap-highlight-color */    
+    height: 40px; 
+    line-height: 40px; /* img alt text verticaly centering */
+    margin: 10px;
+    font-size: 24px;  /* img alt hamburger &#9776; size */
+    font-family: "SlovaC", Tahoma, sans-serif; 
+    color: #e2d3ff;  /* img alt text color */
+}
+.sub-toggle { /* show submenus with javascript */
+    display: block; 
+}
+.langtop a {
+    text-align: center;
+    padding: 0 14px; 
+}
+.langsub a {
+    text-align: center;
+    padding: 0 14px; 
+}
+/* ----------------------------------------- MIDDLE VIEWPORT / horizontalni meni - spusten u sledeci red */ 
+@media screen and (min-width: 960px) { /* #B */
+body { 
+    font-size: 22px;  
+}  
+#wrapper { /* logo & navigation wrapper */
+    position: relative; 
+    display: block; 
+    max-width: 1460px; /* max sirina menija na ekranu */
+    width: unset; 
+    margin: 0 auto; /*  horizontal menu centered in header   */   
+    height: 60px; /* H1 */
+    text-align: center; 
+    top: unset; 
+}
+#nav-wrapper {
+    container-type: inline-size; 
+}
+.logotype { 
+    position: relative; 
+    float: left;
+    height: 60px; /* H1 */
+    width: auto; 
+    text-align: center; 
+    top: unset; 
+    left: unset;
+    display: block; 
+}  
+.nav-class { /* horizontalna navigacija - drugi red */
+    z-index: 9006; 
+    display: flex; 
+    flex-shrink: 1;
+    position: relative; 
+    min-width: 0; 
+    width: 100%;  
+    height: 60px;  
+    text-align: center; /* must be center! Position of submenu links */
+    overflow-y: unset;
+    outline: 0;
+    background-color: #373842; /*  color 02  */
+    justify-content: space-between; /*  vrsta menija  */
+    float: unset; 
+    box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.9); 
+    clip-path: inset(0px -70px -70px -70px);
+}
+.toplink { 
+    z-index: 9005; 
+    height: 60px; /* H1 */
+    display: inline-block;
+    position: relative;
+    box-shadow: unset; /* color 10 - top border color */
+}
+.toplink a { 
+    display: inline-block; 
+    vertical-align: middle; 
+    padding: 0 14px 0 14px; 
+}
+.topsub a { /* this piece of css must be placed above .sublinks a */
+    cursor: default; 
+    pointer-events: none; /* prevents javascript from executing .sub-toggle */
+}
+.top-toggle { 
+    background-color: #373842; 
+}
+.sublinks { 
+    z-index: 9005; 
+    background-color: #302a3a; /* color 03  */
+    top: 60px; /* H1 */
+    display: none;
+    position: absolute; 
+    width: unset; 
+}
+.sublinks a { 
+    padding: 0 14px 0 14px; 
+    pointer-events: auto; /* restored functionality from .topsub a */ 
+    display: inline-block; 
+    box-shadow: unset; 
+    cursor: pointer;
+    background-color: #302a3a;  /* sublinks color */
+} 
+#hamburger-div { 
+    display: none; /* hide hamburger */ 
+} 
+.sub-toggle { 
+    display: none; /* just in case... */ 
+} 
+#stikerim .stikerim, 
+#uputstvam .uputstvam, 
+#pitanjam .pitanjam, 
+#narucivanjem .narucivanjem, 
+#kontaktm .kontaktm {     /* styles when current  3e3c4b  */
+    box-shadow: inset 0 3px #837767; 
+}
+.toplink:hover, .toplink:focus-within { 
+    background-color: #302a3a; /* Color 03  */
+    box-shadow: inset 0 3px #ffcd8c; /* S1 boja za hover  */
+} 
+.sublinks a:hover { 
+    box-shadow: inset 0 -3px #ffcd8c; /* S1 boja za hover  */
+} 
+/* Show horizontal submenus ---------------------- */ 
+.topsub:hover #sub0, .topsub:focus-within #sub0 { 
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 220px); /* položaj PRVOG submenija - higher px value moves submenu left */ 
+} 
+.topsub:hover #sub1, .topsub:focus-within #sub1 { 
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 130px); /* položaj DRUGOG submenija... itd */ 
+} 
+.topsub:hover #sub2, .topsub:focus-within #sub2 { 
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 80px);  
+} 
+.topsub:hover #sub3, .topsub:focus-within #sub3 {
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 230px); 
+}
+.topsub:hover #sub4, .topsub:focus-within #sub4 {
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 200px); 
+}
+.topsub:hover #sub5, .topsub:focus-within #sub5 {
+    display: block; 
+    width: 200vw; 
+    right: calc(-100vw + 120px); 
+}
+.razmak-levi { 
+height: 60px; 
+flex-shrink: 0; 
+width: 10px; 
+display: inline-block; 
+position: relative; 
+}
+.razmak-desni { 
+height: 60px; 
+flex-shrink: 0;
+width: 10px; 
+display: inline-block; 
+position: relative; 
+}
+@media (max-width: 1105px) { /* sirina nav-class u pikselima  */
+  .undercover {
+    height: 120px;
+  }
+}
+/* --------------------------------- BIG VIEWPORT - horizontalni meni - u liniji sa hederom  */ 
+@container (min-width: 1105px) { /* sirina nav-class u pikselima  */
+  .razmak-levi { 
+    flex-shrink: 0;
+    width: 20px;
+  }
+  .razmak-desni {
+    flex-shrink: 0;
+    width: 20px;
+  }
+  .nav-class { /* horizontalna navigacija */ 
+    box-shadow: none;
+    clip-path: none;
+    width: auto;
+    float: right;
+  }
+}
+@media (min-width: 1106px) {
+  .undercover {
+    height: 60px;
+  }
+}
+}
+
+/* --------------------------------------- LARGE VIEWPORT (optional) */ 
+@media screen and (min-width: 1540px) {
+body { 
+    font-size: 24px; 
+} 
+}

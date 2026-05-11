@@ -1,0 +1,61 @@
+@font-face {
+    font-family: SlovaR;
+    src: url("fonts/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: SlovaR;
+    src: url("fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+    font-style: normal
+    }
+@font-face {
+    font-family: SlovaR;
+    src: url("fonts/InfluBG-Italic.otf"); /* Mandatory for Serbian cyrillic - to cover all other cyrillic alphabets use Roboto-Italic.ttf */ 
+    font-weight: normal;
+    font-style: italic;
+    }
+@font-face {
+    font-family: SlovaC;
+    src: url("fonts/RobotoCondensed-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: SlovaC;
+    src: url("fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+    }
+@font-face {
+    font-family: SlovaC;
+    src: url("fonts/InfluBG-Italic.otf"); /* For other than Serbian cyrillic alphabet use RobotoCondensed-Italic.ttf */ 
+    font-weight: normal;
+    font-style: italic;
+    }
+    
+    h1 {color: black;}
+    h2 {color: black; }
+    h3 {color: white; }
+    h4 {color: white; }
+    h5 {color: white;} 
+    h6 {color: white;} 
+    
+    .fr60 {font-size: 60%; font-weight: normal; font-style: normal;}
+    .fr70 {font-size: 70%; font-weight: normal; font-style: normal;}
+    .fr80 {font-size: 80%; font-weight: normal; font-style: normal;}
+    .fr125 {font-size: 125%; font-weight: normal; font-style: normal;}
+    .fr150 {font-size: 150%; font-weight: normal; font-style: normal;}
+    .fr200 {font-size: 200%; font-weight: normal; font-style: normal;}
+    
+    .fc60 {font-family: SlovaC; font-size: 60%; font-weight: normal; font-style: normal;}
+    .fc70 {font-family: SlovaC; font-size: 70%; font-weight: normal; font-style: normal;}
+    .fc80 {font-family: SlovaC; font-size: 80%; font-weight: normal; font-style: normal;}
+    .fc100 {font-family: SlovaC; font-size: 100%; font-weight: normal; font-style: normal;}
+    .fc110 {font-family: SlovaC; font-size: 110%; font-weight: normal; font-style: normal;}
+    .fc120 {font-family: SlovaC; font-size: 120%; font-weight: normal; font-style: normal;}
+    .fc125 {font-family: SlovaC; font-size: 125%; font-weight: normal; font-style: normal;}
+    .fc150 {font-family: SlovaC; font-size: 150%; font-weight: normal; font-style: normal;}
+    .fc200 {font-family: SlovaC; font-size: 200%; font-weight: normal; font-style: normal;}
+    .fc250 {font-family: SlovaC; font-size: 250%; font-weight: normal; font-style: normal;}
