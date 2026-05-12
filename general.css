@@ -11,13 +11,11 @@ body {
     border:0; 
 }
 
-main { 
-    background-color: #54566b;
-}
-
 .main-css {
     text-align:center; 
     max-width: 1500px;
+    background-color: #527a4a;
+    margin: 0 auto; /* center div horizontaly */
 }
 
 a:link {text-decoration: none; color: #adade2; }
