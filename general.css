@@ -25,8 +25,7 @@ a:active {text-decoration: none; color: #8989ce; }
 .logo-div { 
     text-align: right; 
     margin: 0 auto; /* center div horizontaly */
-    padding: 0 50px;
-    max-width: 150px;
+    max-width: 200px;
 }
 .logo-signature { max-width: 250px; max-height: 54px; }
 .links_img { max-width: 250px; max-height: 50px; }
