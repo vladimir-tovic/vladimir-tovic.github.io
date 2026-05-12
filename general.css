@@ -23,11 +23,11 @@ a:hover {text-decoration: none; color: #8989ce; }
 a:active {text-decoration: none; color: #8989ce; }
 
 .logo-div { 
-    text-align: right; 
-    margin: 0 auto; /* center div horizontaly */
-background-color: #4a9743;
-    width: 200px;
+    display: inline-block;
+    width: fit-content;
+    text-align: right; /* Tvoj desni tekst */
 }
+
 .logo-signature { max-width: 250px; max-height: 54px; }
 .links_img { max-width: 250px; max-height: 50px; }
 
